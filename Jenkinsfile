@@ -7,6 +7,12 @@ pipeline {
            bat label: '', script: 'cd'
          }
       }
+      stage('Docker') {
+         steps {
+          bat label: '', script: '''docker images
+docker ps'''
+         }
+      }
     
    }
 }
