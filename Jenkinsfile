@@ -9,8 +9,10 @@ pipeline {
       }
       stage('Docker') {
          steps {
-          bat label: '', script: '''docker images
-docker ps'''
+     bat label: '', script: '''docker images
+cd azure-vote
+docker build -t jenkins-pipeline .
+'''
          }
       }
     
