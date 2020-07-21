@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Verify Branch') {
          steps {
-           bat label: '', script: 'echo hello'
+           bat label: '', script: 'pwd'
          }
       }
     
