@@ -15,6 +15,12 @@ docker build -t jenkins-pipeline .
 '''
          }
       }
+      
     
+   }
+   post {
+      always{
+         echo 'hello everyone'
+      }
    }
 }
