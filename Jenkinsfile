@@ -35,7 +35,7 @@ docker build -t jenkins-pipeline .
          
          }
       }
-      
+      }
     
    }
    post {
@@ -44,4 +44,4 @@ docker build -t jenkins-pipeline .
       }
    }
 }
-}
+
