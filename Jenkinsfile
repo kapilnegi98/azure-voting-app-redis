@@ -21,6 +21,17 @@ pipeline {
              }
       }
        }
+        stages {
+      stage('When condition') {
+         when {
+  branch comparator: 'EQUALS', pattern: 'master'
+}         
+         steps {
+            echo 'this is master'
+          
+         }
+      }
+      
  
       stage('docker push'){
          steps{
