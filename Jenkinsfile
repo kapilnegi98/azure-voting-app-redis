@@ -44,3 +44,4 @@ docker build -t jenkins-pipeline .
       }
    }
 }
+}
