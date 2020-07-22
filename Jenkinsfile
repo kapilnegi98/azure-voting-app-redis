@@ -7,6 +7,20 @@ pipeline {
            bat label: '', script: 'cd'
          }
       }
+       stage('parallel') {
+          parallel{
+             stage('stage1'){
+                steps{
+                timeout(time: 8, unit: 'SECONDS') 
+                }
+             }
+             stage('stage2'){
+                steps{
+                timeout(time: 3, unit: 'SECONDS') 
+                }
+             }
+      }
+       }
  
       stage('docker push'){
          steps{
