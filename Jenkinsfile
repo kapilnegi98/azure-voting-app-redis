@@ -7,14 +7,7 @@ pipeline {
            bat label: '', script: 'cd'
          }
       }
-      stage('Docker') {
-         steps {
-     bat label: '', script: '''docker images
-cd azure-vote
-docker build -t jenkins-pipeline .
-'''
-         }
-      }
+ 
       stage('docker push'){
          steps{
             echo '$WORKSPACE'
