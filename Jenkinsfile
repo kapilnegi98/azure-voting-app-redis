@@ -17,8 +17,10 @@ docker build -t jenkins-pipeline .
       }
       stage('docker push'){
          steps{
+            echo '$WORKSPACE'
             dir('$WORKSPACE/azure-vote') {
             script{
+               
                
                   docker.withRegistry('https://hub.docker.com/', 'dockerhub') {
 
