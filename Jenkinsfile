@@ -24,7 +24,7 @@ pipeline {
  
       stage('When condition') {
          when {
-  branch comparator: 'EQUALS', pattern: 'master'
+    branch 'master'
 }         
          steps {
             echo 'this is master'
