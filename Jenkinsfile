@@ -21,7 +21,7 @@ pipeline {
              }
       }
        }
-        stages {
+ 
       stage('When condition') {
          when {
   branch comparator: 'EQUALS', pattern: 'master'
