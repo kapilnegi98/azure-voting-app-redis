@@ -11,12 +11,12 @@ pipeline {
           parallel{
              stage('stage1'){
                 steps{
-                timeout(time: 8, unit: 'SECONDS') 
+               sleep 8
                 }
              }
              stage('stage2'){
                 steps{
-                timeout(time: 3, unit: 'SECONDS') 
+              sleep 3
                 }
              }
       }
